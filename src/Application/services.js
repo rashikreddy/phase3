@@ -1,5 +1,9 @@
 import React from 'react'
 import '../Css/services.css'
+import exchange from './Images/Exchange.png'
+import campus_clubs from './Images/Campus_clubs.png'
+import bookstore from './Images/Bookstore.png'
+import image from './Images/images.png'
 function Services() {
   return (
     <div>
@@ -7,7 +11,7 @@ function Services() {
         <div className="row">
             <div className="column">
                 <div className="card">
-                    <img src="Images/Exchange.png" alt="Jane" style={{width:'100%'}}/>
+                    <img src={exchange} alt="Jane" style={{width:'100%'}}/>
                     <div className="container">
                         <h2>Exchange Info with peers</h2>
                     </div>
@@ -16,7 +20,7 @@ function Services() {
     
             <div className="column">
                 <div className="card">
-                    <img src="Images/Campus_clubs.png" alt="Jane" style={{width:"100%"}}/>
+                    <img src={campus_clubs} alt="Jane" style={{width:"100%"}}/>
                     <div className="container">
                         <h2>Campus Clubs</h2>
                     </div>
@@ -25,7 +29,7 @@ function Services() {
     
             <div className="column">
                 <div className="card">
-                    <img src="Images/Bookstore.png" alt="Jane" style={{width:"100%"}}/>
+                    <img src={bookstore} alt="Jane" style={{width:"100%"}}/>
                     <div className="container">
                         <h2>Campus Bookstore</h2>
             
@@ -35,7 +39,7 @@ function Services() {
       
             <div className="column">
                 <div className="card">
-                    <img src="Images/images.png" alt="Jane" style={{width:"100%"}}/>
+                    <img src={image} alt="Jane" style={{width:"100%"}}/>
                     <div className="container">
                         <h2>Chat With Business Owners</h2>
             

@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Css/student_profile.css'
 import {Link} from 'react-router-dom'
+import user from './Images/Userimage.png'
 function Student_Profile() {
   return (
     <div>
@@ -10,7 +11,7 @@ function Student_Profile() {
                     
                     
                     
-                    <img src="Images/Userimage.png" style={{height:"150px"}}/><br></br>
+                    <img src={user} style={{height:"150px"}}/><br></br>
                 </div>
                 
                 <li> <Link to="/posts">Products</Link></li><br></br>

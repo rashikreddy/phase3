@@ -1,5 +1,9 @@
 import React from 'react'
 import '../Css/posts.css'
+import Ipad from './Images/Ipad.png'
+import Iphone from './Images/Iphone.png'
+import remove from './Images/Remove.png'
+import returns from './Images/Return.png'
 function Posts() {
   return (
     <div>
@@ -7,7 +11,7 @@ function Posts() {
 
 <div className="column">
   <div className="card">
-    <img src="Images/Iphone.png" alt="Jane" style={{width:"100%"}}/>
+    <img src={Iphone} alt="Jane" style={{width:"100%"}}/>
     <div className="container">
       <h2>Iphone</h2>
       <p className="title">Iphone 13 for $500</p>
@@ -18,7 +22,7 @@ function Posts() {
 
  <div className="column">
   <div className="card">
-    <img src="Images/Add_new.png" alt="Jane" style={{width:"100%"}}/>
+    <img src={Ipad} alt="Jane" style={{width:"100%"}}/>
     <div className="container">
       <h2>Add New Product</h2>
       
@@ -28,7 +32,7 @@ function Posts() {
 
 <div className="column">
   <div className="card">
-   <img src="Images/Remove.png" alt="Jane" style={{width:"100%"}}/>
+   <img src={remove} alt="Jane" style={{width:"100%"}}/>
     <div className="container">
       <h2>Remove Product</h2>
       
@@ -37,7 +41,7 @@ function Posts() {
 </div>
 <div className="column">
   <div className="card">
-   <img src="Images/Return.png" alt="Jane" style={{width:"100%"}}/>
+   <img src={returns} alt="Jane" style={{width:"100%"}}/>
     <div className="container">
       <h2>Return Product</h2>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../Css/businessowner.css'
+import dashboard from './Images/Dashboard2.png'
 function BusinessOwner() {
   return (
     <div>
@@ -23,7 +24,7 @@ function BusinessOwner() {
                 <br></br>
                 <li> <Link to="/dashboards">Dashboards</Link></li>
 
-                <img src="Images/Dashboard.png" />
+                <img src={dashboard} />
             </div>
         </div>
     </div>

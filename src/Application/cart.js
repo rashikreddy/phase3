@@ -1,5 +1,7 @@
 import React from 'react'
  import '../Css/cart.css'
+ import Ipad from './Images/Ipad.png'
+ import Iphone from './Images/Iphone.png'
 function Cart() {
   return (
     <div>
@@ -20,7 +22,7 @@ function Cart() {
                 <div className="basket-product">
                   <div className="item">
                     <div className="product-image">
-                      <img src="Images/Ipad.png" alt="Placholder Image 2" className="product-frame"/>
+                      <img src={Ipad} alt="Placholder Image 2" className="product-frame"/>
                     </div>
                     <div className="product-details">
                       <h1 className='h1'><strong><span className="item-quantity">1</span></strong>Ipad</h1>
@@ -40,7 +42,7 @@ function Cart() {
                 <div className="basket-product">
                   <div className="item">
                     <div className="product-image">
-                      <img src="Images/Iphone.png" alt="Placholder Image 2" className="product-frame"/>
+                      <img src={Iphone} alt="Placholder Image 2" className="product-frame"/>
                     </div>
                     <div className="product-details">
                       <h1 className='h1'><strong><span className="item-quantity">1</span></strong>Iphone</h1>

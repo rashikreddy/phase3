@@ -1,12 +1,16 @@
 import React from 'react'
 import '../Css/add.css'
+import Ipad from './Images/Ipad.png'
+import Iphone from './Images/Iphone.png'
+import add from './Images/Add_new.png'
+import remove from './Images/Remove.png'
 function Add() {
   return (
     <div>
         <div className="row" style={{marginBottom:"10rem"}}>
   <div className="column">
     <div className="card">
-      <img src="Images/Ipad.png" alt="Jane" style={{width:"100%"}}/>
+      <img src={Ipad} alt="Jane" style={{width:"100%"}}/>
       <div className="container">
         <h2>Ipad</h2>
         <p className="title">2nd generation for $240</p>
@@ -18,7 +22,7 @@ function Add() {
 
   <div className="column">
     <div className="card">
-      <img src="Images/Iphone.png" alt="Jane" style={{width:"100%"}}/>
+      <img src={Iphone} alt="Jane" style={{width:"100%"}}/>
       <div className="container">
         <h2>Iphone</h2>
         <p className="title">Iphone 13 for $500</p>
@@ -30,7 +34,7 @@ function Add() {
 
    <div className="column">
     <div className="card">
-      <img src="Images/Add_new.png" alt="Jane" style={{width:"100%"}}/>
+      <img src={add} alt="Jane" style={{width:"100%"}}/>
       <div className="container">
         <h2>Add New Ads</h2>
         
@@ -40,7 +44,7 @@ function Add() {
   
   <div className="column">
     <div className="card">
-     <img src="Images/Remove.png" alt="Jane" style={{width:"100%"}}/>
+     <img src={remove} alt="Jane" style={{width:"100%"}}/>
       <div className="container">
         <h2>Remove Ads</h2>
         

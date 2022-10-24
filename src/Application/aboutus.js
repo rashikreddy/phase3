@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Css/aboutus.css'
+import about from './Images/About_us_image.jpeg';
 function Aboutus() {
   return (
     <div>
@@ -20,7 +21,7 @@ function Aboutus() {
                 <form>
                     <div className="f1">
                         <div className="icon"></div> 
-                        <img src="Images/About_us_image.jpeg" alt="icon" className="icon" />
+                        <img src={about} alt="icon" className="icon" />
                     </div>
                     <div className="inputBox">
                         <input type="text" name="" required="required"/>

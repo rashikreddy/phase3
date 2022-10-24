@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../Css/superadmin.css'
+import user from './Images/Userimage.png'
 function SuperAdmin() {
   return (
     <div>
@@ -9,7 +10,7 @@ function SuperAdmin() {
     <div>
         <br/>
 
-        <img src="Images/Userimage.png" style={{height:"150px"}}/></div>
+        <img src={user} style={{height:"150px"}}/></div>
         <br/>
     <li> <Link to="/admin-operations">Manage Admins</Link></li>
     <br/>

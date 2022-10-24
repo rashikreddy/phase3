@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Css/admin.css'
 import { Link } from 'react-router-dom'
+import dashboard from './Images/Dashboard2.png'
 function Admin() {
   return (
     <div>
@@ -25,7 +26,7 @@ function Admin() {
                 <br></br>
                 <br></br>
                 <li><Link to="Dashboards.html">Dashboard</Link></li>
-                <img src="Images/Dashboard2.png" />
+                <img src={dashboard} />
             </div>
 
         </div>
