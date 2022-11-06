@@ -32,7 +32,7 @@ function App() {
             <Route path='/' element = {<Welcome/>}/>
             <Route path='aboutus' element={<Aboutus/>}/>
             <Route path='services' element={<Services/>}/>
-            <Route path='Login' element={<Login/>}/>
+            <Route path='login' element={<Login/>}/>
             <Route path='register' element={<Register/>}/>
             <Route path='contact' element={<Contact/>}/>
             <Route path='forgetpassword' element={<ForgetPassword/>}/>
@@ -48,6 +48,7 @@ function App() {
             <Route path='studentprofile-operations' element={<StudentProfile_Operations/>}/>
             <Route path='superadmin' element={<SuperAdmin/>}/>
             <Route path='posts' element={<Posts/>}/>
+          
         </Routes>
       <Footer/> 
       </BrowserRouter>

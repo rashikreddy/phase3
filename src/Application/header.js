@@ -2,6 +2,7 @@ import React from 'react'
 import { Outlet, Link } from "react-router-dom";
 import '../Css/header.css'
 import logo from './Images/Main_Logo.png'
+import isLoggedin from './Login'
 export default function Header() {
   return (
     <div className="topnav" id="myTopnav">
@@ -11,7 +12,8 @@ export default function Header() {
         <Link to="/">Welcome</Link>
         <Link to="/aboutus">About Us</Link>
          <Link to="/services">Services</Link>
-         <Link to="/Login">Login/Register</Link>
+         <Link to="/login">Login/Register</Link>
+         <a href='http://rxg1534.uta.cloud/home/' target={'_blank'}>Blog</a>
          <Outlet/>
           <a href="javascript:void(0);" className="icon" onClick={myFunction}></a>
         
@@ -20,6 +22,8 @@ export default function Header() {
     </div>
   )
 }
+
+
 
 function myFunction() {
     var x = document.getElementById("myTopnav");
