@@ -4,6 +4,12 @@ import '../Css/header.css'
 import logo from './Images/Main_Logo.png'
 import isLoggedin from './Login'
 export default function Header() {
+  const x = sessionStorage.getItem('userid');
+const update = () => {
+  sessionStorage.removeItem("userid");
+  sessionStorage.clear()
+
+}
   return (
     <div className="topnav" id="myTopnav">
         <Link to="/">
@@ -12,7 +18,10 @@ export default function Header() {
         <Link to="/">Welcome</Link>
         <Link to="/aboutus">About Us</Link>
          <Link to="/services">Services</Link>
-         <Link to="/login">Login/Register</Link>
+         {
+          
+          x == true ? (<><Link to="/login">Login</Link></>):(<><Link to="/Login" onClick={update()}>Logout</Link></>)
+         }
          <a href='http://rxg1534.uta.cloud/home/' target={'_blank'}>Blog</a>
          <Outlet/>
           <a href="javascript:void(0);" className="icon" onClick={myFunction}></a>

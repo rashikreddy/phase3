@@ -2,7 +2,28 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../Css/businessowner.css'
 import dashboard from './Images/Dashboard2.png'
+import { useState } from 'react'
+import axios from 'axios'
 function BusinessOwner() {
+  const s = true;
+  const [data, setData] = useState({
+    name:'',
+    email:'',
+    
+  })
+  
+  const x = sessionStorage.getItem('userid');
+    console.log(x);
+     axios.post('http://localhost/register/businessowner.php', x).then((result)=>{
+          console.log(result.data);
+          if(s){
+           setData({
+            name:result.data.name,
+            email:result.data.name
+           })
+           s=false;
+          }
+        })
   return (
     <div>
         <div className="row">

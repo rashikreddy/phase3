@@ -6,15 +6,15 @@ import axios from 'axios'
 import { Link, Navigate } from 'react-router-dom'
 
 
-function Register() {
+function RegisterClubs() {
 
   const [data, setData] = useState({
-    name:'',
-    email:'',
-    password:'',
-    type:'',
+    clubname:'',
+    description:'',
+    
     
   })
+  const x = sessionStorage.getItem('userid');
 
   const handleChange = (e) => {
     setData({...data, [e.target.name]:e.target.value});
@@ -22,23 +22,24 @@ function Register() {
   const submitForm = (e) => {
     e.preventDefault();
     const senddata = {
-      name: data.name,
-      email: data.email,
-      password: data.password,
-      type: data.type
-
+      clubname: data.clubname,
+      description: data.description,
+      user : x
     }
     // console.log(senddata);
     
-    axios.post('http://localhost/register/register.php', senddata).then((result)=>{
+    axios.post('http://localhost/register/clubs.php', senddata).then((result)=>{
       if(result.data.message == "failure"){
         alert('Invalid User');
       } else {
         console.log(result.data);
         alert("registered successfully");
-        window.open('/login', "_self");
+        window.open('/clubs', "_self");
       }
     })
+    
+
+    
   }
 
   return (
@@ -46,13 +47,9 @@ function Register() {
         <div className="login">
                 <h1>Register</h1>
                 <form onSubmit={submitForm}>
-                  <p><input type="text" name="name" onChange={handleChange} value={data.name} placeholder="Name" /></p>
-
-                  <p><input type="email" name="email" value={data.email} placeholder="Email" onChange={handleChange}/></p>
-
-                  <p><input type="password" name="password" value={data.password} placeholder="Password" id="password" onChange={handleChange}/></p>
+                  <p><input type="text" name="clubname" onChange={handleChange} value={data.clubname} placeholder="Club Name" /></p>
                   
-                  <p><input type="text" name="type" value={data.type} placeholder="Type" id="type" onChange={handleChange}/></p>
+                  <p><input type="text" name="description" value={data.description} placeholder="Description" onChange={handleChange}/></p>
 
                   <p className="submit"><input type="submit" name="commit" value="Register"/></p>
 
@@ -62,4 +59,4 @@ function Register() {
   )
 }
 
-export default Register
+export default RegisterClubs

@@ -22,6 +22,10 @@ import Student_Profile from './Application/student_profile';
 import StudentProfile_Operations from './Application/studentprofile_operations';
 import SuperAdmin from './Application/superadmin';
 import Posts from './Application/posts';
+import RegisterClubs from './Application/registerclubs';
+import RegisterProduct from './Application/registerproduct';
+import CreateAdd from './Application/createadd';
+import Logout from './Application/logout';
 
 function App() {
   return (
@@ -48,7 +52,10 @@ function App() {
             <Route path='studentprofile-operations' element={<StudentProfile_Operations/>}/>
             <Route path='superadmin' element={<SuperAdmin/>}/>
             <Route path='posts' element={<Posts/>}/>
-          
+            <Route path='registerclubs' element={<RegisterClubs/>}/>
+            <Route path='registerproduct' element={<RegisterProduct/>}/>
+            <Route path='createadd' element={<CreateAdd/>}/>
+            <Route path='logout' element={<Logout/>}/>
         </Routes>
       <Footer/> 
       </BrowserRouter>

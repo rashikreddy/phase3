@@ -1,17 +1,61 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import '../Css/Login.css'
+import axios from 'axios';
+import { useState } from 'react';
 function Login() {
+
+
+  const [data, setData] = useState({
+    email:'',
+    password:'',
+  });
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setData({...data, [e.target.name]:e.target.value});
+  }
+  const submitForm = (e) => {
+    e.preventDefault();
+    const senddata = {
+      email: data.email,
+      password: data.password
+
+    }
+    // console.log(senddata);
+    
+    axios.post('http://localhost/register/login.php', senddata).then((result)=>{
+      if(result.status == 404){
+        alert('Invalid User');
+      } else {
+        console.log(result);
+        sessionStorage.setItem('userid',result.data.userid);
+        if(result.data.type==='student'){
+          navigate('/studentprofile');
+        }
+        if(result.data.type==='business'){
+          navigate('/businessowner');
+        }
+        if(result.data.type === 'schooladmin'){
+          navigate('/admin')
+        }
+        if(result.data.type === 'superadmin'){
+          navigate('/superadmin')
+        }
+      }
+    })
+  }
+
+
   return (
     <div>
         <div className="login">
       <h1>Login</h1>
-      <form action="/studentprofile">
-        <p><input type="text" name="login" value={email} placeholder="Username or Email" required/></p>
-        <p><input type="password" name="password" value={password} placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8"/></p>
-        <p className="submit"><input type="submit" name="commit" value="Login" onClick={login()}/></p>
-        <p>username:dummy@domain.com</p>
-        <p>password:DummyD@1234</p>
+      <form onSubmit={submitForm}>
+        <p><input type="email" name="email" value={data.email} placeholder="Email" onChange={handleChange} required/></p>
+        <p><input type="password" name="password" value={data.password} placeholder="Password" onChange={handleChange} pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minLength="8"/></p>
+        <p className="submit"><input type="submit" name="commit" value="Login"/></p>
       </form>
     </div>
 
@@ -22,15 +66,6 @@ function Login() {
     </div>
   )
 }
-var email;
-var password;
-var isLoggedin=false;
-function login(){
-  if(email=='dummy@domain.com' && password=='DummyD@1234'){
-    isLoggedin=true;
-    return <Link to='/studentprofile'></Link>
-  }
 
-}
 
 export default Login;
