@@ -25,7 +25,7 @@ function Login() {
     }
     // console.log(senddata);
     
-    axios.post('http://localhost/register/login.php', senddata).then((result)=>{
+    axios.post('http://sxd7594.uta.cloud/register/login.php', senddata).then((result)=>{
       if(result.status == 404){
         alert('Invalid User');
       } else {

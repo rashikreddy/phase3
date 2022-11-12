@@ -18,7 +18,7 @@ function Clubs() {
     const [data, setData] = useState({
         da : {}
       })
-      axios.get('http://localhost/register/getclubs.php').then((result)=>{
+      axios.get('http://sxd7594.uta.cloud/register/getclubs.php').then((result)=>{
         // console.log(result)
         setData({
           da : result.data

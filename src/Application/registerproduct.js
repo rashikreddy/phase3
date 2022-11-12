@@ -31,7 +31,7 @@ function RegisterProduct() {
     }
     // console.log(senddata);
     
-    axios.post('http://localhost/register/products.php', senddata).then((result)=>{
+    axios.post('http://sxd7594.uta.cloud/register/products.php', senddata).then((result)=>{
       if(result.data.message == "failure"){
         alert('Invalid User');
       } else {

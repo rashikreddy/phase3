@@ -14,7 +14,7 @@ import Contact from './contact'
   const [data, setData] = useState({
     da : {}
   })
-  axios.get('http://localhost/register/getadds.php').then((result)=>{
+  axios.get('http://sxd7594.uta.cloud/register/getadds.php').then((result)=>{
     // console.log(result)
     setData({
       da : result.data

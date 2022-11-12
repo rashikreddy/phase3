@@ -28,7 +28,7 @@ function RegisterClubs() {
     }
     // console.log(senddata);
     
-    axios.post('http://localhost/register/clubs.php', senddata).then((result)=>{
+    axios.post('http://sxd7594.uta.cloud/register/clubs.php', senddata).then((result)=>{
       if(result.data.message == "failure"){
         alert('Invalid User');
       } else {

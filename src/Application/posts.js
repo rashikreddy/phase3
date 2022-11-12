@@ -10,7 +10,7 @@ function Posts() {
   const [data, setData] = useState({
     da : {}
   })
-  axios.get('http://localhost/register/getproducts.php').then((result)=>{
+  axios.get('http://sxd7594.uta.cloud/register/getproducts.php').then((result)=>{
     // console.log(result)
     setData({
       da : result.data

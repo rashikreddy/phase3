@@ -14,7 +14,7 @@ function Admin() {
   
   const x = sessionStorage.getItem('userid');
     console.log(x);
-     axios.post('http://localhost/register/admin.php', x).then((result)=>{
+     axios.post('http://sxd7594.uta.cloud/register/admin.php', x).then((result)=>{
           console.log(result.data);
           if(s){
            setData({

@@ -21,7 +21,7 @@ const x = sessionStorage.getItem('userid');
 if(s){
 
   console.log(x);
-   axios.post('http://localhost/register/studentprofile.php', x).then((result)=>{
+   axios.post('http://sxd7594.uta.cloud/public_html/studentprofile.php', x).then((result)=>{
         console.log(result.data);
         
          setData({
